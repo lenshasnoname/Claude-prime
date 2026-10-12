@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inventaire des outils de vibe coding</title>
+<style>
+  :root {
+    --texte: #1a1a1a;
+    --gris: #5b6472;
+    --accent: #1f4e79;
+    --fond-ligne: #f2f5f8;
+    --bordure: #d3d9e0;
+    --fond: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    color: var(--accent);
+  }
+  h2 {
+    font-size: 21px;
+    margin: 44px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent);
+  }
+  h3 { font-size: 17px; margin: 24px 0 8px; }
+  p, li { max-width: 72ch; }
+  .sous-titre { color: var(--gris); margin: 0 0 28px; }
+  .chiffres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 8px 0 12px;
+  }
+  .chiffre {
+    flex: 1 1 200px;
+    border: 1px solid var(--bordure);
+    padding: 14px 16px;
+  }
+  .chiffre strong {
+    display: block;
+    font-size: 34px;
+    color: var(--accent);
+    line-height: 1.1;
+  }
+  .chiffre.cle { border: 2px solid var(--accent); }
+  .tableau { overflow-x: auto; margin: 12px 0; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--bordure);
+  }
+  th { background: var(--accent); color: #fff; font-weight: bold; }
+  tbody tr:nth-child(even) { background: var(--fond-ligne); }
+  td.num { width: 36px; color: var(--gris); }
+  .non { color: #8a1c1c; font-weight: bold; }
+  .note { color: var(--gris); font-size: 14px; }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 12px;
+    border-top: 1px solid var(--bordure);
+    color: var(--gris);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Inventaire des outils de vibe coding</h1>
+<p class="sous-titre">Comparaison de deux listes : un post publié sur X et le dépôt GitHub awesome-vibecoding. Page réalisée le 12 octobre 2026.</p>
+
+<h2>En bref</h2>
+<div class="chiffres">
+  <div class="chiffre"><strong>25</strong>ressources citées dans le post X (source A)</div>
+  <div class="chiffre"><strong>43</strong>outils dans la sélection principale du dépôt GitHub (source B)</div>
+  <div class="chiffre cle"><strong>0</strong>outil en commun entre les deux listes</div>
+</div>
+<p>Les deux sources se réclament du vibe coding, mais elles ne parlent pas de la même chose. Le post X recense des ressources pour soigner l'apparence d'un site : galeries d'inspiration, composants d'interface, animations. Le dépôt GitHub recense les outils qui écrivent, testent et déploient le code. Aucune des 25 ressources du post n'apparaît dans le dépôt, ni dans sa sélection principale ni dans son catalogue complémentaire.</p>
+
+<h2>1. Les deux sources</h2>
+<div class="tableau">
+<table>
+  <thead>
+    <tr><th>Critère</th><th>Source A : post X</th><th>Source B : awesome-vibecoding</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Nature</td><td>Post sur un réseau social, consulté sous forme de capture d'écran</td><td>Dépôt GitHub public, liste de type « awesome »</td></tr>
+    <tr><td>Auteur</td><td>Himanshu Hingorani, qui se présente comme fondateur de scrolltide.co</td><td>Roboco, société coréenne de conseil en IA. La version consultée est une copie (fork) publiée par Scap-Mehdi, qui y a ajouté la traduction française</td></tr>
+    <tr><td>Date</td><td>9 octobre 2026</td><td>Sélection vérifiée le 18 septembre 2026, ajouts jusqu'au 4 octobre 2026. Traduction française ajoutée le 9 octobre 2026</td></tr>
+    <tr><td>Contenu</td><td>25 ressources numérotées, avec une phrase de description chacune</td><td>43 outils classés par usage, environ 80 autres dans un catalogue complémentaire, plus des guides et articles</td></tr>
+    <tr><td>Critères de sélection</td><td>Aucun critère annoncé</td><td>Critères publiés : pertinence, preuves publiques, apport distinct, transparence sur l'accès et le prix, maintenance</td></tr>
+    <tr><td>Traçabilité</td><td>Aucune : pas de lien dans la capture, chiffres invérifiables (« 600+ prompts primés »)</td><td>Historique complet des modifications, date de vérification pour chaque outil, liste des entrées retirées avec leurs motifs</td></tr>
+    <tr><td>Intérêts de l'auteur</td><td>Son propre site est classé n°1, et il le recommande à nouveau dans sa première réponse sous le post. Trois autres entrées pointent vers le même domaine (colorion.co)</td><td>Plusieurs projets de Roboco ou de son fondateur figurent dans la liste (VDLC, roboco-cli, vmux, vibe-lead). Les règles de contribution demandent toutefois de déclarer ce type de lien</td></tr>
+    <tr><td>Audience affichée</td><td>18,2 k vues, 593 enregistrements, 216 « j'aime »</td><td>Non pertinent pour juger de la fiabilité</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>2. Inventaire de la source A</h2>
+<p>Les adresses sont recopiées depuis la capture. Deux d'entre elles sont difficiles à lire et sont signalées comme telles. La dernière colonne indique si la ressource figure dans la source B.</p>
+<div class="tableau">
+<table>
+  <thead>
+    <tr><th>N°</th><th>Ressource</th><th>Adresse</th><th>À quoi elle sert</th><th>Catégorie</th><th>Dans B ?</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="num">1</td><td>Scrolltide</td><td>scrolltide.co</td><td>Prompts et code source de sites en 3D et à défilement animé</td><td>Prompts</td><td class="non">Non</td></tr>
+    <tr><td class="num">2</td><td>Minimal Gallery</td><td>minimal.gallery</td><td>Sélection de sites au design épuré</td><td>Inspiration</td><td class="non">Non</td></tr>
+    <tr><td class="num">3</td><td>Godly</td><td>godly.website</td><td>Sites choisis à la main pour leur qualité graphique</td><td>Inspiration</td><td class="non">Non</td></tr>
+    <tr><td class="num">4</td><td>Refero Styles</td><td>styles.refero.design</td><td>Styles et typographies de produits existants</td><td>Inspiration</td><td class="non">Non</td></tr>
+    <tr><td class="num">5</td><td>Component Gallery</td><td>component.gallery</td><td>Comparaison de composants entre grands systèmes de design</td><td>Inspiration</td><td class="non">Non</td></tr>
+    <tr><td class="num">6</td><td>Mobbin</td><td>mobbin.com</td><td>Parcours d'écrans d'applications réelles</td><td>Inspiration</td><td class="non">Non</td></tr>
+    <tr><td class="num">7</td><td>DESIGNmd</td><td>designmd.ai</td><td>Systèmes de design rédigés en Markdown pour qu'un agent IA les lise</td><td>Prompts</td><td class="non">Non</td></tr>
+    <tr><td class="num">8</td><td>VibePrompt</td><td>vibeprompts.dev</td><td>Prompts prêts à l'emploi pour tableaux de bord et pages d'accueil</td><td>Prompts</td><td class="non">Non</td></tr>
+    <tr><td class="num">9</td><td>21st.dev</td><td>21st.dev</td><td>Registre de composants connectable à un agent par MCP</td><td>Composants d'interface</td><td class="non">Non</td></tr>
+    <tr><td class="num">10</td><td>Kinetics</td><td>kinetics.colorion.co</td><td>Effets de mouvement avec code React et prompts</td><td>Animation et effets</td><td class="non">Non</td></tr>
+    <tr><td class="num">11</td><td>shadcn/ui</td><td>ui.shadcn.com</td><td>Bibliothèque de composants très répandue</td><td>Composants d'interface</td><td class="non">Non</td></tr>
+    <tr><td class="num">12</td><td>Aceternity UI</td><td>ui.aceternity.com</td><td>Composants animés React et Tailwind</td><td>Composants d'interface</td><td class="non">Non</td></tr>
+    <tr><td class="num">13</td><td>Magic UI</td><td>magicui.design</td><td>Composants pour sites web modernes</td><td>Composants d'interface</td><td class="non">Non</td></tr>
+    <tr><td class="num">14</td><td>Motion Primitives</td><td>motion-primitives.com</td><td>Composants d'animation et d'interaction</td><td>Animation et effets</td><td class="non">Non</td></tr>
+    <tr><td class="num">15</td><td>Uiverse</td><td>uiverse.io</td><td>Éléments d'interface créés par une communauté</td><td>Composants d'interface</td><td class="non">Non</td></tr>
+    <tr><td class="num">16</td><td>Shadcnblocks</td><td>shadcnblocks.com</td><td>Blocs complets de pages</td><td>Composants d'interface</td><td class="non">Non</td></tr>
+    <tr><td class="num">17</td><td>mapcn</td><td>mapcn.dev</td><td>Composants de cartes géographiques</td><td>Composants d'interface</td><td class="non">Non</td></tr>
+    <tr><td class="num">18</td><td>Awwwards</td><td>awwwards.com</td><td>Sites primés lors de concours de design</td><td>Inspiration</td><td class="non">Non</td></tr>
+    <tr><td class="num">19</td><td>Liquid Glass</td><td>Adresse peu lisible sur la capture</td><td>Composants à effet de verre</td><td>Animation et effets</td><td class="non">Non</td></tr>
+    <tr><td class="num">20</td><td>CSS Text Effects</td><td>text-effects.colorion.co</td><td>Effets de texte en CSS</td><td>Animation et effets</td><td class="non">Non</td></tr>
+    <tr><td class="num">21</td><td>Circle Loaders</td><td>Adresse peu lisible sur la capture</td><td>Animations de chargement</td><td>Animation et effets</td><td class="non">Non</td></tr>
+    <tr><td class="num">22</td><td>Gradient Buttons</td><td>gradientbuttons.colorion.co</td><td>Boutons en dégradé</td><td>Composants d'interface</td><td class="non">Non</td></tr>
+    <tr><td class="num">23</td><td>Shadertoy</td><td>shadertoy.com</td><td>Shaders à étudier et modifier</td><td>Animation et effets</td><td class="non">Non</td></tr>
+    <tr><td class="num">24</td><td>3Dicons</td><td>3dicons.co</td><td>Icônes 3D gratuites</td><td>Ressources graphiques</td><td class="non">Non</td></tr>
+    <tr><td class="num">25</td><td>Anime.js</td><td>animejs.com</td><td>Bibliothèque JavaScript d'animation</td><td>Animation et effets</td><td class="non">Non</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Répartition : 8 composants d'interface, 7 ressources d'animation et d'effets, 6 galeries d'inspiration, 3 banques de prompts, 1 ressource graphique. Aucune n'est un assistant qui écrit le code à la place de l'utilisateur. Claude, Cursor et Lovable ne sont cités qu'en passant, dans la description du n°1.</p>
+
+<h2>3. Inventaire de la source B</h2>
+<p>Seule la sélection principale (page d'accueil du dépôt) est reprise ici. Le catalogue complémentaire a été consulté pour vérifier les recoupements avec la source A.</p>
+<div class="tableau">
+<table>
+  <thead>
+    <tr><th>Usage</th><th>Outils</th><th>Nombre</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Écrire et modifier du code</td><td>Aider, Claude Code, Cline, Cursor, Gemini CLI, GitHub Copilot, Goose, Kiro, OpenAI Codex CLI, Pi</td><td>10</td></tr>
+    <tr><td>Prototyper une application ou une interface</td><td>Bolt.new, Dyad, Lovable, Onlook, Replit, v0</td><td>6</td></tr>
+    <tr><td>Donner du contexte et des spécifications à l'agent</td><td>Caliber, Context7, Filesystem MCP, GitHub MCP, Neon, Notion MCP, OpenSpec, Supabase MCP</td><td>8</td></tr>
+    <tr><td>Tester, relire et sécuriser</td><td>Agent QA, Playwright MCP, PR-Agent, Prbl, Qodo, Semgrep MCP, Sentry</td><td>7</td></tr>
+    <tr><td>Déployer et exécuter</td><td>Cloudflare, E2B, Publish.my, XcodeBuildMCP</td><td>4</td></tr>
+    <tr><td>Organiser et suivre le travail des agents</td><td>Delta (Zed), Duckweed, llm.log, Parallel Code, Shep, Superagent, usage, Warp Terminal</td><td>8</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>4. Comparaison</h2>
+<h3>Ce qui rapproche les deux sources</h3>
+<p>Presque rien sur le fond. Les seuls noms présents des deux côtés sont Claude, Cursor et Lovable, mentionnés dans la description du n°1 de la source A sans en faire partie. Les deux listes partagent surtout un mot, « vibe coding », qu'elles n'emploient pas dans le même sens.</p>
+
+<h3>Ce qui les distingue</h3>
+<p>La source A répond à la question « comment rendre beau un site généré par une IA ». La source B répond à « avec quels outils faire écrire, tester et mettre en ligne du code par une IA ». La source A est un contenu d'audience, publié pour être enregistré et partagé, avec un intérêt commercial direct de son auteur. La source B est un document de référence qui expose sa méthode, date ses vérifications et garde la trace de ce qu'il retire.</p>
+
+<h3>Fiabilité</h3>
+<p>Pour un inventaire des outils de vibe coding, la source B est nettement plus fiable. Elle n'est pas pour autant neutre ni infaillible. Ses propres auteurs précisent que la vérification porte sur l'existence de l'offre à une date donnée, et non sur un test ou un audit de sécurité. Sa mise à jour est en partie confiée à des agents IA. La version française est une traduction ajoutée dans une copie du dépôt, et c'est la version anglaise qui fait référence. Enfin, l'éditeur y fait figurer ses propres projets.</p>
+<p>La source A garde un intérêt comme complément pour la partie design, à condition de vérifier chaque ressource et de garder en tête que l'auteur promeut son propre site.</p>
+
+<h2>5. Limites de ce travail</h2>
+<p>Les 25 ressources de la source A n'ont pas été testées une à une. Deux adresses n'ont pas pu être lues avec certitude sur la capture. Pour la source B, seule la copie publiée par Scap-Mehdi a été consultée, car c'est elle qui contient la version française ; le dépôt d'origine de Roboco peut avoir évolué depuis.</p>
+
+<h2>Sources</h2>
+<p>Source A : Himanshu Hingorani, « 25 vibe coding resources », post publié sur X le 9 octobre 2026. Capture d'écran : docs/Vibe-coding/Vibe-coding.png.</p>
+<p>Source B : <a href="https://github.com/Scap-Mehdi/awesome-vibecoding">github.com/Scap-Mehdi/awesome-vibecoding</a>, copie de <a href="https://github.com/roboco-io/awesome-vibecoding">roboco-io/awesome-vibecoding</a>. Version française : <a href="https://github.com/Scap-Mehdi/awesome-vibecoding/blob/main/README.fr.md">README.fr.md</a>. Catalogue complémentaire : <a href="https://github.com/Scap-Mehdi/awesome-vibecoding/blob/main/docs/verified-catalog.md">docs/verified-catalog.md</a>. Consulté le 12 octobre 2026.</p>
+
+<footer>Page publiée avec GitHub et Cloudflare Pages.</footer>
+
+</main>
+</body>
+</html>
